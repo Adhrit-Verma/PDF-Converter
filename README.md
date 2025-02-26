@@ -2,7 +2,7 @@
 
 A powerful and easy-to-use **Electron-based** desktop application that converts text files, images, and OCR-scanned text into PDFs. This app allows users to select multiple files, specify an output location, and track progress with a built-in progress bar.
 
-![UI Screenshot](screenshot.png)  
+![UI Screenshot](assets/image.png)  
 (*Replace this with your actual UI screenshot*)
 
 ## Features
