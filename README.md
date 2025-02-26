@@ -24,25 +24,26 @@ Ensure you have **Node.js** installed, then clone this repository:
 ```sh
 git clone https://github.com/YOUR_USERNAME/PDF-Converter.git
 cd PDF-Converter
+```
 Install dependencies:
 
-sh
-Copy
+```sh
 npm install
+```
 Run the app:
 
-sh
-Copy
+```sh
 npm start
+```
 2. Download Pre-built Executable
 Alternatively, download the latest release from the Releases Page.
 
 Building the Application
 To build a Windows .exe installer, run:
 
-sh
-Copy
+```sh
 npm run dist
+```
 This will create a standalone installer inside the dist folder.
 
 How to Use
