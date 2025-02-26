@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Converter App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 800px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .interactive {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+    .section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #4a90e2;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    /* Convert button styled green */
+    .convertBtn {
+      background-color: #28a745;
+    }
+    .convertBtn:hover {
+      background-color: #218838;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+    select, input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .output {
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #555;
+      word-wrap: break-word;
+    }
+    /* Progress bar styling */
+    #progressContainer {
+      margin-top: 20px;
+      display: none;
+    }
+    #progressBar {
+      width: 100%;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PDF Converter</h1>
+    <div class="interactive">
+      <div class="section">
+        <button id="selectFiles">Select Files</button>
+        <div id="fileList" class="output"></div>
+      </div>
+      <div class="section">
+        <label for="conversionType">Select Conversion Type:</label>
+        <select id="conversionType">
+          <option value="txtToPdf">TXT to PDF</option>
+          <option value="imagesToPdf">Images to PDF</option>
+          <option value="ocrToPdf">Image (with text) to PDF (OCR)</option>
+        </select>
+      </div>
+      <div class="section">
+        <button id="selectOutput">Select Output Folder</button>
+        <div id="outputPath" class="output"></div>
+      </div>
+      <div class="section">
+        <button id="convertBtn" class="convertBtn">Convert</button>
+      </div>
+    </div>
+    <!-- Progress Bar -->
+    <div id="progressContainer">
+      <progress id="progressBar" value="0" max="100"></progress>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
